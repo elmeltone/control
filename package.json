@@ -1,0 +1,21 @@
+{
+  "name": "controller",
+  "version": "2.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run build:sass",
+    "watch": "npm run watch:sass",
+    "build:sass": "node-sass src/sass/main.scss src/index.css",
+    "watch:sass": "nodemon -e scss -w src/sass -x 'npm run build:sass'",
+    "start": "node server.js"
+  },
+  "author": "MeltWebs <michael@meltwebs.com>",
+  "license": "ISC",
+  "dependencies": {
+    "express": "4.14.0",
+    "mqtt": "2.0.1",
+    "node-sass": "3.11.3",
+    "nodemon": "1.11.0"
+  }
+}

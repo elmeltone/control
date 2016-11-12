@@ -1,0 +1,99 @@
+
+/*
+Theme Name: Controller 2.0
+Author: MeltWebs <michael@meltwebs.com>
+*/
+
+/***** Colors ******/
+
+$dark: #363942;
+$complement: #5C832F;
+$anchor: #284907;
+$contrast: #382513;
+$plain: #D8CAA8;
+
+/*
+Japanese Garden Palette:
+sand: D8CAA8;
+moss: 5C832F;
+leaf: 284907;
+soil: 382513;
+stone: 363942;
+*/
+
+/***** Normalize ******/
+
+@import 'normalize';
+
+/***** Mixins ******/
+
+/***** General Styles ******/
+
+body {
+  background: $anchor;
+  color: $anchor;
+  text-align: center;
+  font-size: 16px;
+}
+
+div {
+  display: inline-block;
+}
+
+/***** Specific Styles ******/
+
+.container {
+  width: 304px;
+  height: 464px;
+  margin: 8px auto;
+  background: darken($complement, 5%);
+  color: $plain;
+}
+
+.masthead, .dashboard, .instrument {
+  width: 100%;
+}
+
+.masthead, .instrument {
+  background: $complement;
+}
+
+.dashboard {
+  border-top: 2px solid $anchor;
+  padding-top: 4px;
+}
+
+.instrument {
+  height: 48px;
+  border-bottom: 2px solid $anchor;
+}
+
+.grip, .sensor-name, .indicator {
+  height: 100%;
+  float: left;
+  vertical-align: middle;
+}
+
+.grip {
+  width: 20%;
+  &:hover {
+    cursor: move;
+  }
+}
+
+.sensor-name {
+  width: 30%;
+  text-align: left;
+}
+
+.title {
+  padding-left: 16px;
+}
+
+.indicator {
+  width: 50%;
+}
+
+/***** Modules ******/
+
+@import 'switch';
