@@ -424,12 +424,13 @@ body {
   cursor: pointer;
   width: 16px;
   float: left;
-  margin: 4px 0 0 8px;
-  cursor: move; }
+  margin: 4px 0 0 3px;
+  cursor: move;
+  font-size: 12px; }
 
 .instrument-icon {
-  margin: 24px auto 4px auto;
-  font-size: 20px; }
+  margin: 18px auto 14px auto;
+  font-size: 24px; }
 
 .indicator {
   height: 36px;
@@ -442,7 +443,7 @@ body {
   margin: 0 auto; }
 
 .title {
-  margin: 8px auto; }
+  margin: 6px auto; }
 
 /*** Responsive ************/
 @media screen and (min-width: 420px) {
