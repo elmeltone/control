@@ -420,34 +420,25 @@ body {
   margin: 0 auto;
   background: #5C832F; }
 
-.sensor-name, .indicator {
-  /*height: 100%;
-  float: left;
-  vertical-align: middle;*/ }
-
 .line-wrapper {
   cursor: pointer;
   width: 16px;
-  position: relative;
-  top: 8px;
-  left: 8px;
+  float: left;
+  margin: 8px;
   cursor: move; }
 
-.line {
-  width: 100%;
-  margin: 0 0 3px 0;
-  height: 2px;
-  background: #D8CAA8; }
+.indicator {
+  height: 36px;
+  line-height: 36px;
+  width: 70px;
+  margin: 42px auto 0 auto;
+  background: #425d22; }
 
 .sensor-name {
-  /*width: 30%;
-  text-align: left;*/ }
+  margin: 0 auto; }
 
 .title {
-  /*padding-left: 16px;*/ }
-
-.indicator {
-  /*width: 50%;*/ }
+  margin: 8px auto; }
 
 /*** Responsive ************/
 @media screen and (min-width: 420px) {
