@@ -4,7 +4,7 @@ Theme Name: Controller 2.0
 Author: MeltWebs <michael@meltwebs.com>
 */
 
-/***** Colors ******/
+/***** Colors **************/
 
 $dark: #363942;
 $complement: #5C832F;
@@ -21,16 +21,23 @@ soil: 382513;
 stone: 363942;
 */
 
-/***** Normalize ******/
+/***** Normalize ***********/
 
 @import 'normalize';
 
-/***** Mixins ******/
+/***** Mixins **************/
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
 
 /***** General Styles ******/
 
 body {
-  background: $anchor;
+  background: darken($complement, 5%);
   color: $anchor;
   text-align: center;
   font-size: 16px;
@@ -40,13 +47,11 @@ div {
   display: inline-block;
 }
 
-/***** Specific Styles ******/
+/***** Specific Styles *****/
 
 .container {
-  width: 304px;
-  height: 464px;
-  margin: 8px auto;
-  background: darken($complement, 5%);
+  width: 100%;
+  margin: 0 auto 16px auto;
   color: $plain;
 }
 
@@ -54,18 +59,26 @@ div {
   width: 100%;
 }
 
-.masthead, .instrument {
-  background: $complement;
-}
-
 .dashboard {
+  width: 100%;
   border-top: 2px solid $anchor;
   padding-top: 4px;
 }
 
+.instruments-wrapper {
+  width: 304px;
+  margin: 0 auto;
+}
+
 .instrument {
-  height: 48px;
-  border-bottom: 2px solid $anchor;
+  height: 128px;
+  width: 150px;
+  border: 1px solid $anchor;
+  @include border-radius(4px);
+  padding-top: 4px;
+  float: top;
+  margin: 0 auto;
+  background: $complement;
 }
 
 .grip, .sensor-name, .indicator {
@@ -94,6 +107,22 @@ div {
   width: 50%;
 }
 
-/***** Modules ******/
+/*** Responsive ************/
 
-@import 'switch';
+@media screen and (min-width: 420px) {
+  .instruments-wrapper {
+    width: 408px;
+  }
+  .instruments {
+    width: 200px;
+  }
+}
+
+@media screen and (min-width: 640px) {
+  .instruments-wrapper {
+    width: 612px;
+  }
+  .instruments {
+    width: 300px;
+  }
+}

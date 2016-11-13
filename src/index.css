@@ -2,7 +2,7 @@
 Theme Name: Controller 2.0
 Author: MeltWebs <michael@meltwebs.com>
 */
-/***** Colors ******/
+/***** Colors **************/
 /*
 Japanese Garden Palette:
 sand: D8CAA8;
@@ -11,7 +11,7 @@ leaf: 284907;
 soil: 382513;
 stone: 363942;
 */
-/***** Normalize ******/
+/***** Normalize ***********/
 /*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Change the default font family in all browsers (opinionated).
@@ -379,10 +379,10 @@ textarea {
   font: inherit;
   /* 2 */ }
 
-/***** Mixins ******/
+/***** Mixins **************/
 /***** General Styles ******/
 body {
-  background: #284907;
+  background: #4f7028;
   color: #284907;
   text-align: center;
   font-size: 16px; }
@@ -390,27 +390,36 @@ body {
 div {
   display: inline-block; }
 
-/***** Specific Styles ******/
+/***** Specific Styles *****/
 .container {
-  width: 304px;
-  height: 464px;
-  margin: 8px auto;
-  background: #4f7028;
+  width: 100%;
+  margin: 0 auto 16px auto;
   color: #D8CAA8; }
 
 .masthead, .dashboard, .instrument {
   width: 100%; }
 
-.masthead, .instrument {
-  background: #5C832F; }
-
 .dashboard {
+  width: 100%;
   border-top: 2px solid #284907;
   padding-top: 4px; }
 
+.instruments-wrapper {
+  width: 304px;
+  margin: 0 auto; }
+
 .instrument {
-  height: 48px;
-  border-bottom: 2px solid #284907; }
+  height: 128px;
+  width: 150px;
+  border: 1px solid #284907;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  border-radius: 4px;
+  padding-top: 4px;
+  float: top;
+  margin: 0 auto;
+  background: #5C832F; }
 
 .grip, .sensor-name, .indicator {
   height: 100%;
@@ -432,74 +441,15 @@ div {
 .indicator {
   width: 50%; }
 
-/***** Modules ******/
-.onoffswitch {
-  float: left;
-  position: relative;
-  width: 61px;
-  margin-top: 16px;
-  margin-left: 24px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none; }
+/*** Responsive ************/
+@media screen and (min-width: 420px) {
+  .instruments-wrapper {
+    width: 408px; }
+  .instruments {
+    width: 200px; } }
 
-.onoffswitch-checkbox {
-  display: none; }
-
-.onoffswitch-label {
-  display: block;
-  overflow: hidden;
-  cursor: pointer;
-  border: 2px solid #D8CAA8;
-  border-radius: 16px; }
-
-.onoffswitch-inner {
-  display: block;
-  width: 200%;
-  margin-left: -100%;
-  transition: margin 0.3s ease-in 0s; }
-
-.onoffswitch-inner:before, .onoffswitch-inner:after {
-  display: block;
-  float: left;
-  width: 50%;
-  height: 16px;
-  padding: 0;
-  line-height: 16px;
-  font-size: 12px;
-  color: white;
-  font-family: Trebuchet, Arial, sans-serif;
-  font-weight: bold;
-  box-sizing: border-box; }
-
-.onoffswitch-inner:before {
-  content: "ON";
-  padding-right: 10px;
-  background-color: #5C832F;
-  color: #D8CAA8; }
-
-.onoffswitch-inner:after {
-  content: "OFF";
-  padding-right: 10px;
-  background-color: #363942;
-  color: #D8CAA8;
-  text-align: right; }
-
-.onoffswitch-switch {
-  display: block;
-  width: 12px;
-  margin: 2px;
-  background: #D8CAA8;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 44px;
-  border: 2px solid #D8CAA8;
-  border-radius: 16px;
-  transition: all 0.3s ease-in 0s; }
-
-.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
-  margin-left: 0; }
-
-.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
-  right: -2px; }
+@media screen and (min-width: 640px) {
+  .instruments-wrapper {
+    width: 612px; }
+  .instruments {
+    width: 300px; } }
