@@ -387,9 +387,6 @@ body {
   text-align: center;
   font-size: 16px; }
 
-div {
-  display: inline-block; }
-
 /***** Specific Styles *****/
 .container {
   width: 100%;
@@ -417,19 +414,31 @@ div {
   -ms-border-radius: 4px;
   border-radius: 4px;
   padding-top: 4px;
-  float: top;
+  float: left;
   margin: 0 auto;
   background: #5C832F; }
 
-.grip, .sensor-name, .indicator {
+.sensor-name, .indicator {
   height: 100%;
   float: left;
   vertical-align: middle; }
 
-.grip {
-  width: 20%; }
-  .grip:hover {
+.line-wrapper {
+  cursor: pointer;
+  width: 20%;
+  height: 18px;
+  margin: 0 4px;
+  float: left;
+  padding: 0; }
+  .line-wrapper:hover {
     cursor: move; }
+
+.line {
+  width: 100%;
+  margin: 4px auto;
+  height: 2px;
+  padding: 0;
+  background: #363942; }
 
 .sensor-name {
   width: 30%;

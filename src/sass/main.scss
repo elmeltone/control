@@ -43,10 +43,6 @@ body {
   font-size: 16px;
 }
 
-div {
-  display: inline-block;
-}
-
 /***** Specific Styles *****/
 
 .container {
@@ -76,22 +72,35 @@ div {
   border: 1px solid $anchor;
   @include border-radius(4px);
   padding-top: 4px;
-  float: top;
+  float: left;
   margin: 0 auto;
   background: $complement;
 }
 
-.grip, .sensor-name, .indicator {
+.sensor-name, .indicator {
   height: 100%;
   float: left;
   vertical-align: middle;
 }
 
-.grip {
+.line-wrapper {
+  cursor: pointer;
   width: 20%;
+  height: 18px;
+  margin: 0 4px;
+  float: left;
+  padding: 0;
   &:hover {
     cursor: move;
   }
+}
+
+.line {
+  width: 100%;
+  margin: 4px auto;
+  height: 2px;
+  padding: 0;
+  background: $dark;
 }
 
 .sensor-name {
