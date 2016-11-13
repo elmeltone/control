@@ -418,20 +418,24 @@ body {
   float: left;
   clear: all;
   margin: 0 auto;
-  background: #5C832F; }
+  background: #699636; }
 
 .line-wrapper {
   cursor: pointer;
   width: 16px;
   float: left;
-  margin: 8px;
+  margin: 4px 0 0 8px;
   cursor: move; }
+
+.instrument-icon {
+  margin: 24px auto 4px auto;
+  font-size: 20px; }
 
 .indicator {
   height: 36px;
   line-height: 36px;
   width: 70px;
-  margin: 42px auto 0 auto;
+  margin: 0 auto;
   background: #425d22; }
 
 .sensor-name {
